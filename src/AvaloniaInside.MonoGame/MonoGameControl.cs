@@ -97,7 +97,7 @@ public sealed class MonoGameControl : Control
 		// Capture the executed frame into the bitmap
 		CaptureFrame(device, _bitmap);
 		// Flush the bitmap to context
-		context.DrawImage(_bitmap, new Rect(_bitmap.Size), Bounds);
+		context.DrawImage(_bitmap, new Rect(_bitmap.Size), new Rect(Bounds.Size));
 	}
 
 	protected override Size ArrangeOverride(Size finalSize)
